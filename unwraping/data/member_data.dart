@@ -1,0 +1,163 @@
+import '../models/contact_information.dart';
+import '../models/neon_academy_member.dart';
+import '../models/team.dart';
+
+final List<NeonAcademyMember> members = [
+  NeonAcademyMember(
+    fullName: 'Hayrullah Kalkan',
+    title: 'Flutter Developer',
+    horoscope: 'Leo',
+    memberLevel: 'A1',
+    homeTown: 'Istanbul',
+    age: 24,
+    team: Team.flutterDevelopment,
+    contactInformation: ContactInformation(
+      email: 'hayrullah@example.com',
+      phoneNumber: '555-111-1111',
+    ),
+  ),
+  NeonAcademyMember(
+    fullName: 'Irem',
+    title: 'UI/UX Designer',
+    horoscope: 'Aries',
+    memberLevel: 'B2',
+    homeTown: 'Ankara',
+    age: 23,
+    team: Team.uiUxDesign,
+    contactInformation: ContactInformation(
+      email: 'irem@example.com',
+      phoneNumber: '555-222-2222',
+    ),
+  ),
+  NeonAcademyMember(
+    fullName: 'Arzu',
+    title: 'Ui Designer',
+    horoscope: 'Pisces',
+    memberLevel: 'B1',
+    homeTown: 'Izmir',
+    age: 25,
+    team: Team.uiUxDesign,
+    contactInformation: ContactInformation(
+      email: 'arzu@example.com',
+      phoneNumber: '555-333-3333',
+    ),
+  ),
+  NeonAcademyMember(
+    fullName: 'Taha',
+    title: 'Android Developer',
+    horoscope: 'Gemini',
+    memberLevel: 'A2',
+    homeTown: 'Bursa',
+    age: 22,
+    team: Team.androidDevelopment,
+    contactInformation: ContactInformation(
+      email: 'taha@example.com',
+      phoneNumber: '555-444-4444',
+    ),
+  ),
+  NeonAcademyMember(
+    fullName: 'Görkem',
+    title: 'Flutter Developer',
+    horoscope: 'Taurus',
+    memberLevel: 'C2',
+    homeTown: 'Antalya',
+    age: 26,
+    team: Team.flutterDevelopment,
+    contactInformation: ContactInformation(
+      email: 'gorkem@example.com',
+      phoneNumber: '555-555-5555',
+    ),
+  ),
+  NeonAcademyMember(
+    fullName: 'Necmi',
+    title: 'UI Designer',
+    horoscope: 'Cancer',
+    memberLevel: 'A1',
+    homeTown: 'Konya',
+    age: 21,
+    team: Team.uiUxDesign,
+    contactInformation: ContactInformation(
+      email: 'necmi@example.com',
+      phoneNumber: '555-666-6666',
+    ),
+  ),
+  NeonAcademyMember(
+    fullName: 'Ahmet',
+    title: 'IOS Developer',
+    horoscope: 'Virgo',
+    memberLevel: 'B2',
+    homeTown: 'Istanbul',
+    age: 27,
+    team: Team.iosDevelopment,
+    contactInformation: ContactInformation(
+      email: 'ahmet@example.com',
+      phoneNumber: '555-777-7777',
+    ),
+  ),
+
+  NeonAcademyMember(
+    fullName: 'Emre',
+    title: 'Flutter Developer',
+    horoscope: 'Gemini',
+    memberLevel: 'A1',
+    homeTown: 'Ankara',
+    age: 22,
+    team: Team.flutterDevelopment,
+    contactInformation: ContactInformation(
+      email: 'emre@example.com',
+      phoneNumber: '555-101-0101',
+    ),
+  ),
+  NeonAcademyMember(
+    fullName: 'Zeynep',
+    title: 'UI/UX Designer',
+    horoscope: 'Virgo',
+    memberLevel: 'C2',
+    homeTown: 'Izmir',
+    age: 26,
+    team: Team.uiUxDesign,
+    contactInformation: ContactInformation(
+      email: 'zeynep@example.com',
+      phoneNumber: '555-202-0202',
+    ),
+  ),
+  NeonAcademyMember(
+    fullName: 'Can',
+    title: 'IOS Developer',
+    horoscope: 'Taurus',
+    memberLevel: 'B1',
+    homeTown: 'Istanbul',
+    age: 24,
+    team: Team.iosDevelopment,
+    contactInformation: ContactInformation(
+      email: 'can@example.com',
+      phoneNumber: '555-606-0606',
+    ),
+  ),
+  NeonAcademyMember(
+    fullName: 'Deniz',
+    title: 'Flutter Developer',
+    horoscope: 'Cancer',
+    memberLevel: 'A1',
+    homeTown: 'Gaziantep',
+    age: 27,
+    team: Team.flutterDevelopment,
+    contactInformation: ContactInformation(
+      email: 'deniz@example.com',
+      phoneNumber: '555-707-0707',
+    ),
+  ),
+  NeonAcademyMember(
+    fullName: 'Ece',
+    title: 'UI/UX Designer',
+    horoscope: 'Leo',
+    memberLevel: 'C2',
+    homeTown: 'Trabzon',
+    age: 23,
+    team: Team.uiUxDesign,
+    contactInformation: ContactInformation(
+      email: 'ece@example.com',
+      phoneNumber: '555-808-0808',
+    ),
+  ),
+];
