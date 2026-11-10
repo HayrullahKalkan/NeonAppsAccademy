@@ -14,37 +14,37 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   int currentPageIndex = 0;
-  DreamDestination? savedDestination;
+  List<DreamDestination> savedDestinations = [];
 
   final preferencesService = PreferencesService();
 
   Future<void> saveDestination(DreamDestination dream) async {
-    await preferencesService.setDestination(dream);
-
     setState(() {
-      savedDestination = dream;
+      savedDestinations.add(dream);
     });
+
+    await preferencesService.setDestinations(savedDestinations);
   }
 
-  Future<void> loadDestination() async {
-    final destination = await preferencesService.getDestination();
+  Future<void> loadDestinations() async {
+    final destinations = await preferencesService.getDestinations();
 
     setState(() {
-      savedDestination = destination;
+      savedDestinations = destinations;
     });
   }
 
   @override
   void initState() {
     super.initState();
-    loadDestination();
+    loadDestinations();
   }
 
   @override
   Widget build(BuildContext context) {
     final pages = [
       AddDestinationScreen(onSave: saveDestination),
-      VisitedPlacesScreen(destination: savedDestination),
+      VisitedPlacesScreen(destinations: savedDestinations),
     ];
 
     return Scaffold(

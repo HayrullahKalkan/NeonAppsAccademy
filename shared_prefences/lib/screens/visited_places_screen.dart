@@ -3,13 +3,17 @@ import 'package:flutter/material.dart';
 import '../models/dream_destination.dart';
 
 class VisitedPlacesScreen extends StatelessWidget {
-  final DreamDestination? destination;
+  final List<DreamDestination> destinations;
 
-  const VisitedPlacesScreen({super.key, required this.destination});
+  const VisitedPlacesScreen({super.key, required this.destinations});
 
   @override
   Widget build(BuildContext context) {
-    if (destination == null || !destination!.hasVisited) {
+    final visitedPlaces = destinations
+        .where((destination) => destination.hasVisited)
+        .toList();
+
+    if (visitedPlaces.isEmpty) {
       return const Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -25,18 +29,21 @@ class VisitedPlacesScreen extends StatelessWidget {
       );
     }
 
-    return ListView(
+    return ListView.builder(
       padding: const EdgeInsets.all(16),
-      children: [
-        Card(
+      itemCount: visitedPlaces.length,
+      itemBuilder: (context, index) {
+        final destination = visitedPlaces[index];
+
+        return Card(
           child: ListTile(
             leading: const CircleAvatar(child: Icon(Icons.location_on)),
-            title: Text(destination!.destination),
-            subtitle: Text('Visited ${destination!.visitCount} times'),
+            title: Text(destination.destination),
+            subtitle: Text('Visited ${destination.visitCount} times'),
             trailing: const Icon(Icons.check_circle, color: Colors.green),
           ),
-        ),
-      ],
+        );
+      },
     );
   }
 }

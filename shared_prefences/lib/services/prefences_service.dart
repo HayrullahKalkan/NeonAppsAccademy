@@ -1,22 +1,41 @@
 import 'package:shared_preferences/shared_preferences.dart';
 
+import 'dart:convert';
+
 import '../models/dream_destination.dart';
 
 class PreferencesService {
-  Future<void> setDestination(DreamDestination dream) async {
-    final set = await SharedPreferences.getInstance();
+  Future<void> setDestinations(List<DreamDestination> destinations) async {
+    final prefs = await SharedPreferences.getInstance();
 
-    await set.setBool("hasVisited", dream.hasVisited);
-    await set.setInt("visitCount", dream.visitCount);
-    await set.setString("destination", dream.destination);
+    final jsonList = destinations.map((destination) {
+      return {
+        'hasVisited': destination.hasVisited,
+        'visitCount': destination.visitCount,
+        'destination': destination.destination,
+      };
+    }).toList();
+
+    await prefs.setString('destinations', jsonEncode(jsonList));
   }
 
-  Future<DreamDestination> getDestination() async {
-    final get = await SharedPreferences.getInstance();
-    return (DreamDestination(
-      hasVisited: get.getBool("hasVisited") ?? false,
-      visitCount: get.getInt("visitCount") ?? 0,
-      destination: get.getString("destination") ?? "",
-    ));
+  Future<List<DreamDestination>> getDestinations() async {
+    final prefs = await SharedPreferences.getInstance();
+
+    final jsonString = prefs.getString('destinations');
+
+    if (jsonString == null) {
+      return [];
+    }
+
+    final List<dynamic> jsonList = jsonDecode(jsonString);
+
+    return jsonList.map((item) {
+      return DreamDestination(
+        hasVisited: item['hasVisited'],
+        visitCount: item['visitCount'],
+        destination: item['destination'],
+      );
+    }).toList();
   }
 }
