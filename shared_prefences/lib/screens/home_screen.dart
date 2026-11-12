@@ -48,7 +48,12 @@ class _HomeScreenState extends State<HomeScreen> {
     ];
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Dream Destinations')),
+      appBar: AppBar(
+        title: const Text('Dream Destinations'),
+        leading: Icon(Icons.flight_takeoff),
+        centerTitle: true,
+        backgroundColor: const Color.fromARGB(255, 100, 175, 237),
+      ),
 
       body: pages[currentPageIndex],
 

@@ -20,7 +20,7 @@ class _GalleryScreentate extends State<GalleryScreen> {
         child: GridView.builder(
           itemCount: images.length,
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2,
+            crossAxisCount: 3,
             crossAxisSpacing: 12,
             mainAxisSpacing: 12,
             childAspectRatio: 0.8,

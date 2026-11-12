@@ -100,7 +100,7 @@ class _AddDestinationScreenState extends State<AddDestinationScreen> {
                 decoration: const InputDecoration(
                   labelText: 'Visit Count',
                   border: OutlineInputBorder(),
-                  prefixIcon: Icon(Icons.repeat),
+                  prefixIcon: Icon(Icons.event_available),
                 ),
               ),
 

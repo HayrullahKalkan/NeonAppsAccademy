@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../screens/image_detail_screen.dart';
 import '../models/image_model.dart';
 
 class ImageCard extends StatelessWidget {
@@ -9,23 +10,33 @@ class ImageCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(15),
-        border: Border.all(color: Colors.grey, width: 1),
-      ),
-      clipBehavior: Clip.antiAlias,
-      child: Column(
-        children: [
-          Expanded(
-            child: Image.network(
-              image.imageUrl,
-              width: double.infinity,
-              fit: BoxFit.cover,
-            ),
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => ImageDetailScreen(imageUrl: image.imageUrl),
           ),
-          Padding(padding: const EdgeInsets.all(8)),
-        ],
+        );
+      },
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(15),
+          border: Border.all(color: Colors.grey, width: 1),
+        ),
+        clipBehavior: Clip.antiAlias,
+        child: Column(
+          children: [
+            Expanded(
+              child: Image.network(
+                image.imageUrl,
+                width: double.infinity,
+                fit: BoxFit.cover,
+              ),
+            ),
+            Padding(padding: const EdgeInsets.all(8)),
+          ],
+        ),
       ),
     );
   }

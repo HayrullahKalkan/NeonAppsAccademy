@@ -15,7 +15,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Dream Destinations',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.pink),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: const Color.fromARGB(255, 100, 175, 237),
+        ),
         useMaterial3: true,
       ),
       home: const HomeScreen(),

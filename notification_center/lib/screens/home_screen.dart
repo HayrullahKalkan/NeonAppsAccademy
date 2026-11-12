@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:notification_center/screens/waiting_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -29,9 +30,13 @@ class _HomeScreenState extends State<HomeScreen> {
     final result = istrue();
 
     if (result == 1) {
-      //ekran geçişi yapılacak 
-    }else{
-      //ekrana hata mesajı verilecek 
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => WaitingScreen()),
+      );
+    } else {
+      ScaffoldMessenger.of(context)
+          .showSnackBar(const SnackBar(content: Text("Wrong decryption key!")));
     }
   }
 
@@ -55,7 +60,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
               const SizedBox(height: 20),
-              ElevatedButton(onPressed: null, child: Text("decyrpt")),
+              ElevatedButton(onPressed: decrypt, child: Text("decyrpt")),
             ],
           ),
         ),
