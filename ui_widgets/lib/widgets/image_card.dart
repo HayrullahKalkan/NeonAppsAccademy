@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../screens/image_detail_screen.dart';
+import '../screens/tasks/image_detail_screen.dart';
 import '../models/image_model.dart';
 
 class ImageCard extends StatelessWidget {

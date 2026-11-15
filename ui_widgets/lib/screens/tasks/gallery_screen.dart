@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../data/image_data.dart';
-import '../widgets/image_card.dart';
+import '../../data/image_data.dart';
+import '../../widgets/image_card.dart';
 
 class GalleryScreen extends StatefulWidget {
   const GalleryScreen({super.key});
@@ -23,7 +23,7 @@ class _GalleryScreentate extends State<GalleryScreen> {
             crossAxisCount: 3,
             crossAxisSpacing: 12,
             mainAxisSpacing: 12,
-            childAspectRatio: 0.8,
+            childAspectRatio: 1,
           ),
           itemBuilder: (context, index) {
             return ImageCard(image: images[index]);
