@@ -1,6 +1,8 @@
 import 'package:ui_widgets/screens/tasks/button_screen/button_screen.dart';
 import 'package:ui_widgets/screens/tasks/gallery_screen.dart';
 import 'package:ui_widgets/screens/tasks/textfile_screen/queen_screen.dart';
+import 'package:ui_widgets/screens/tasks/sliders/dragon_slider_screen.dart';
+import 'package:ui_widgets/screens/tasks/switches/switch_screen.dart';
 
 import '../models/task_card_model.dart';
 
@@ -23,9 +25,17 @@ final List<TaskCardModel> homeTasks = [
     page: const QueenScreen(),
   ),
 
-  /*TaskCardModel(title: 'Sliders', description: 'Slider Widgets Challenge'),
+  TaskCardModel(
+    title: 'Sliders',
+    description: 'Slider Widgets Challenge',
+    page: const DragonSliderScreen(),
+  ),
 
-  TaskCardModel(title: 'Switches', description: 'Switch Widgets Challenge'),
+  TaskCardModel(
+    title: 'Switches',
+    description: 'Switch Widgets Challenge',
+    page: const SwitchScreen(),
+  ),
 
-  TaskCardModel(title: 'Steppers', description: 'Stepper Widgets Challenge'),*/
+  /*TaskCardModel(title: 'Steppers', description: 'Stepper Widgets Challenge'),*/
 ];
