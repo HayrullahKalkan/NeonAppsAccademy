@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../data/image_data.dart';
-import '../../widgets/image_card.dart';
+import '../../../data/image_data.dart';
+import '../../../widgets/image_card.dart';
 
 class GalleryScreen extends StatefulWidget {
   const GalleryScreen({super.key});

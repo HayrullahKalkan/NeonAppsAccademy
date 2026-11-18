@@ -1,5 +1,5 @@
 import 'package:ui_widgets/screens/tasks/button_screen/button_screen.dart';
-import 'package:ui_widgets/screens/tasks/gallery_screen.dart';
+import 'package:ui_widgets/screens/tasks/container/gallery_screen.dart';
 import 'package:ui_widgets/screens/tasks/textfile_screen/queen_screen.dart';
 import 'package:ui_widgets/screens/tasks/sliders/dragon_slider_screen.dart';
 import 'package:ui_widgets/screens/tasks/switches/switch_screen.dart';
@@ -8,6 +8,8 @@ import 'package:ui_widgets/screens/tasks/segmented_controls/segmented_screen.dar
 import 'package:ui_widgets/screens/tasks/allert_controlles/alert_screen.dart';
 import 'package:ui_widgets/screens/tasks/search_bar/search_bar_screen.dart';
 import 'package:ui_widgets/screens/tasks/data_table/titanic_screen.dart';
+import 'package:ui_widgets/screens/tasks/steppers/steppers_screen.dart';
+import 'package:ui_widgets/screens/tasks/circular_progress_indicator/circular_progress_screen.dart';
 
 import '../models/task_card_model.dart';
 
@@ -67,6 +69,16 @@ final List<TaskCardModel> homeTasks = [
     title: 'DataTable',
     description: 'DataTable Widgets Challenge',
     page: const TitanicScreen(),
+  ),
+  TaskCardModel(
+    title: 'Circular Progress',
+    description: 'Circular Progress Indicator Widgets Challenge',
+    page: const CircularProgressScreen(),
+  ),
+  TaskCardModel(
+    title: 'Steppers',
+    description: 'Stepper Widgets Challenge',
+    page: const SteppersScreen(),
   ),
   /*TaskCardModel(title: 'Steppers', description: 'Stepper Widgets Challenge'),*/
 ];
