@@ -11,19 +11,26 @@ class CircularProgressScreen extends StatefulWidget {
 class _CircularProgressScreenState extends State<CircularProgressScreen> {
   int counter = 0;
   bool isloading = false;
+  
   Future<void> startCounter() async {
+    setState(() {
+      isloading = true;
+      counter = 0;
+    });
+
     for (int i = 0; i <= 100; i++) {
       await Future.delayed(const Duration(milliseconds: 50));
-      if (!mounted) return;
-      setState(() {
-        if (i == 100) {
-          isloading = true;
-        }
-        counter = i;
-      });
 
       if (!mounted) return;
+
+      setState(() {
+        counter = i;
+      });
     }
+
+    setState(() {
+      isloading = false;
+    });
   }
 
   Color get currentColor {
