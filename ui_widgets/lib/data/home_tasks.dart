@@ -1,5 +1,7 @@
 import 'package:ui_widgets/screens/tasks/button_screen/button_screen.dart';
 import 'package:ui_widgets/screens/tasks/container/gallery_screen.dart';
+import 'package:ui_widgets/screens/tasks/list_view/list_view_screen.dart';
+import 'package:ui_widgets/screens/tasks/linear_progress_indicators/linear_progress_screen.dart';
 import 'package:ui_widgets/screens/tasks/textfile_screen/queen_screen.dart';
 import 'package:ui_widgets/screens/tasks/sliders/dragon_slider_screen.dart';
 import 'package:ui_widgets/screens/tasks/switches/switch_screen.dart';
@@ -79,6 +81,21 @@ final List<TaskCardModel> homeTasks = [
     title: 'Steppers',
     description: 'Stepper Widgets Challenge',
     page: const SteppersScreen(),
+  ),
+  TaskCardModel(
+    title: 'Linear Progress',
+    description: 'Linear Progress Indicator Widgets Challenge',
+    page: const LinearProgressScreen(),
+  ),
+  TaskCardModel(
+    title: 'Page Control',
+    description: 'Page Control Widgets Challenge',
+    page: const PageControlScreen(),
+  ),
+  TaskCardModel(
+    title: 'ListView Controls',
+    description: 'ListView Controls Widgets Challenge',
+    page: const ListViewScreen(),
   ),
   /*TaskCardModel(title: 'Steppers', description: 'Stepper Widgets Challenge'),*/
 ];
