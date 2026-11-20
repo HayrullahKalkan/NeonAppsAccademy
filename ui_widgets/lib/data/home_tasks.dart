@@ -2,6 +2,8 @@ import 'package:ui_widgets/screens/tasks/button_screen/button_screen.dart';
 import 'package:ui_widgets/screens/tasks/container/gallery_screen.dart';
 import 'package:ui_widgets/screens/tasks/list_view/list_view_screen.dart';
 import 'package:ui_widgets/screens/tasks/linear_progress_indicators/linear_progress_screen.dart';
+import 'package:ui_widgets/screens/tasks/pickers/profile_screen.dart';
+import 'package:ui_widgets/screens/tasks/tabbar/tabbar_screen.dart';
 import 'package:ui_widgets/screens/tasks/textfile_screen/queen_screen.dart';
 import 'package:ui_widgets/screens/tasks/sliders/dragon_slider_screen.dart';
 import 'package:ui_widgets/screens/tasks/switches/switch_screen.dart';
@@ -96,6 +98,16 @@ final List<TaskCardModel> homeTasks = [
     title: 'ListView Controls',
     description: 'ListView Controls Widgets Challenge',
     page: const ListViewScreen(),
+  ),
+  TaskCardModel(
+    title: 'Tabbar',
+    description: 'Tabbar Controls Widgets Challenge',
+    page: TabBarScreen(),
+  ),
+  TaskCardModel(
+    title: 'pickers',
+    description: 'Picker Widgets Challenge',
+    page: ProfileScreen(),
   ),
   /*TaskCardModel(title: 'Steppers', description: 'Stepper Widgets Challenge'),*/
 ];
