@@ -1,10 +1,10 @@
-class destination {
+class Destination {
   final String name;
   final String location;
   final String imageUrl;
   final String description;
 
-  destination({
+  Destination({
     required this.name,
     required this.location,
     required this.imageUrl,
