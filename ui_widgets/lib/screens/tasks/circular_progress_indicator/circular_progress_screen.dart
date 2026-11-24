@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ui_widgets/utils/colors.dart';
+import 'package:ui_widgets/widgets/custom_app_bar.dart';
 
 class CircularProgressScreen extends StatefulWidget {
   const CircularProgressScreen({super.key});
@@ -26,27 +27,6 @@ class _CircularProgressScreenState extends State<CircularProgressScreen> {
     }
   }
 
-  /*Future<void> startCounter() async {
-    setState(() {
-      isloading = true;
-      counter = 0;
-    });
-
-    for (int i = 0; i <= 100; i++) {
-      await Future.delayed(const Duration(milliseconds: 50));
-
-      if (!mounted) return;
-
-      setState(() {
-        counter = i;
-      });
-    }
-
-    setState(() {
-      isloading = false;
-    });
-  }
-*/
   Color get currentColor {
     return progressColors[counter ~/ 10];
   }
@@ -54,7 +34,7 @@ class _CircularProgressScreenState extends State<CircularProgressScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Circular Progress Indicator')),
+      appBar: CustomAppBar(title: 'Circular Progress Indicator'),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

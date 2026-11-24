@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:ui_widgets/widgets/custom_app_bar.dart';
 import 'package:ui_widgets/widgets/profile_option_list.dart';
 
 import '../../../models/profile_option_model.dart';
@@ -127,9 +128,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: user.backgroundColor,
-      appBar: AppBar(
-        title: const Text('Profile Screen'),
-        backgroundColor: Colors.green,
+      appBar: CustomAppBar(
+        title: 'Profile',
+        subtitle: 'FLUTTER CHALLENGE',
       ),
       body: Center(
         child: SingleChildScrollView(

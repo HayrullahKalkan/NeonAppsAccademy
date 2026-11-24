@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ui_widgets/widgets/custom_app_bar.dart';
 
 class DatePickerScreen extends StatefulWidget {
   late DateTime initialDate;
@@ -20,7 +21,7 @@ class _DatePickerScreenState extends State<DatePickerScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Date Picker')),
+      appBar: CustomAppBar(title: 'Date Picker', subtitle: 'FLUTTER CHALLENGE'),
       body: Center(
         child: ElevatedButton(
           onPressed: () async {

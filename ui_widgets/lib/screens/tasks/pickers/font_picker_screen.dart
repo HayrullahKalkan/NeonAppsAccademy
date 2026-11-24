@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ui_widgets/widgets/custom_app_bar.dart';
 
 class FontPickerScreen extends StatefulWidget {
   final String initialFont;
@@ -28,7 +29,10 @@ class _FontPickerScreenState extends State<FontPickerScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Font Picker')),
+      appBar: CustomAppBar(
+        title: 'Font Picker',
+        subtitle: 'FLUTTER CHALLENGE',
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

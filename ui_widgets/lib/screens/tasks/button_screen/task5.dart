@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
+import 'package:ui_widgets/widgets/custom_app_bar.dart';
 
 class Task5 extends StatefulWidget {
   const Task5({super.key});
@@ -53,7 +54,10 @@ class _Task5State extends State<Task5> with SingleTickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Bank Robbery'), centerTitle: true),
+      appBar: CustomAppBar(
+        title: 'Gesture Detector',
+        subtitle: 'FLUTTER CHALLENGE',
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

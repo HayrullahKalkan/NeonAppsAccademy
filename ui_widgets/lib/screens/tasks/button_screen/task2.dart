@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ui_widgets/widgets/custom_app_bar.dart';
 
 class Task2 extends StatelessWidget {
   const Task2({super.key});
@@ -6,7 +7,7 @@ class Task2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Saloon Specials'), centerTitle: true),
+      appBar: CustomAppBar(title: 'InkWell', subtitle: 'FLUTTER CHALLENGE'),
       body: Center(
         child: Material(
           color: Colors.transparent,

@@ -4,7 +4,7 @@ import '../models/task_card_model.dart';
 
 class TaskList extends StatelessWidget {
   final List<TaskCardModel> tasks;
-  final Function(TaskCardModel) onTaskTap;
+  final ValueChanged<TaskCardModel> onTaskTap;
 
   const TaskList({super.key, required this.tasks, required this.onTaskTap});
 
@@ -19,6 +19,7 @@ class TaskList extends StatelessWidget {
           child: ListTile(
             title: Text(task.title),
             subtitle: Text(task.description),
+            leading: task.icon,
             trailing: const Icon(Icons.arrow_forward_ios),
             onTap: () => onTaskTap(task),
           ),

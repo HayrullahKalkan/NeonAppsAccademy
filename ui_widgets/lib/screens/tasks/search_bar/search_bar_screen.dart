@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ui_widgets/widgets/custom_app_bar.dart';
 
 import '../../../data/character_data.dart';
 import '../../../models/character_model.dart';
@@ -29,9 +30,10 @@ class _SearchbarScreenState extends State<SearchbarScreen> {
     final results = filteredCharacters;
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('SearchBar Challenge'),
-        centerTitle: true,
+      appBar: CustomAppBar(
+        title: 'Search Bar',
+        subtitle: 'FLUTTER CHALLENGE',
+        icon: Icons.search,
       ),
       body: Padding(
         padding: const EdgeInsets.all(16),

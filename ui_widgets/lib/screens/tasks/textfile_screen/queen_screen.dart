@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:ui_widgets/widgets/custom_app_bar.dart';
 
 class QueenScreen extends StatefulWidget {
   const QueenScreen({super.key});
@@ -26,9 +27,9 @@ class _QueenScreenState extends State<QueenScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("The Queen's Challenge"),
-        centerTitle: true,
+      appBar: CustomAppBar(
+        title: 'Queen Screen',
+        subtitle: 'FLUTTER CHALLENGE',
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16),

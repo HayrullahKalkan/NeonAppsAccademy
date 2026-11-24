@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ui_widgets/widgets/custom_app_bar.dart';
 
 class Task4 extends StatefulWidget {
   const Task4({super.key});
@@ -13,7 +14,10 @@ class _Task4State extends State<Task4> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Blacksmith Shop'), centerTitle: true),
+      appBar: CustomAppBar(
+        title: 'Elevated Button',
+        subtitle: 'FLUTTER CHALLENGE',
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

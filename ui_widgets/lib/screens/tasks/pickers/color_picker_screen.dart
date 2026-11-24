@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ui_widgets/widgets/custom_app_bar.dart';
 
 class ColorPickerScreen extends StatefulWidget {
   late Color initialColor;
@@ -26,7 +27,10 @@ class _ColorPickerScreenState extends State<ColorPickerScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Color Picker')),
+      appBar: CustomAppBar(
+        title: 'Color Picker',
+        subtitle: 'FLUTTER CHALLENGE',
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

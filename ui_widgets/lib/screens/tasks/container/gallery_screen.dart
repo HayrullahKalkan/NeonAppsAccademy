@@ -2,19 +2,18 @@ import 'package:flutter/material.dart';
 
 import '../../../data/image_data.dart';
 import '../../../widgets/image_card.dart';
+import '../../../widgets/custom_app_bar.dart';
 
-class GalleryScreen extends StatefulWidget {
+class GalleryScreen extends StatelessWidget {
   const GalleryScreen({super.key});
-
-  @override
-  State<StatefulWidget> createState() => _GalleryScreentate();
-}
-
-class _GalleryScreentate extends State<GalleryScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('container')),
+      appBar: CustomAppBar(
+        title: 'Gallery',
+        subtitle: 'FLUTTER CHALLENGE',
+        icon: Icons.photo_library,
+      ),
       body: Padding(
         padding: const EdgeInsets.all(12),
         child: GridView.builder(

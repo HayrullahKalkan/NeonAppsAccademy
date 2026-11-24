@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:ui_widgets/widgets/custom_app_bar.dart';
 
 class SegmentedScreen extends StatefulWidget {
   const SegmentedScreen({super.key});
@@ -40,7 +40,10 @@ class _SegmentedScreenState extends State<SegmentedScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Dinosaur Academy'), centerTitle: true),
+      appBar: CustomAppBar(
+        title: 'Segmented Controls',
+        subtitle: 'FLUTTER CHALLENGE',
+      ),
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(16),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ui_widgets/widgets/custom_app_bar.dart';
 
 class Task3 extends StatefulWidget {
   const Task3({super.key});
@@ -13,7 +14,10 @@ class _Task3State extends State<Task3> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Vigilante Button'), centerTitle: true),
+      appBar: CustomAppBar(
+        title: 'Gesture Detector',
+        subtitle: 'FLUTTER CHALLENGE',
+      ),
       body: Center(
         child: GestureDetector(
           onTapDown: (details) {

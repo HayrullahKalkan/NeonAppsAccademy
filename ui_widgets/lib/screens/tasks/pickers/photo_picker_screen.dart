@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:ui_widgets/widgets/custom_app_bar.dart';
 
 class PhotoChangeScreen extends StatefulWidget {
   PhotoChangeScreen({super.key});
@@ -22,7 +23,10 @@ class _PhotoChangeScreenState extends State<PhotoChangeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Photo Change')),
+      appBar:CustomAppBar(
+        title: 'Photo Change',
+        subtitle: 'FLUTTER CHALLENGE',
+      ),
       body: Center(
         child: ElevatedButton.icon(
           onPressed: pickPhoto,

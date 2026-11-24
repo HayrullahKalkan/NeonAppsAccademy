@@ -25,17 +25,12 @@ class ImageCard extends StatelessWidget {
           border: Border.all(color: Colors.grey, width: 1),
         ),
         clipBehavior: Clip.antiAlias,
-        child: Column(
-          children: [
-            Expanded(
-              child: Image.network(
-                image.imageUrl,
-                width: double.infinity,
-                fit: BoxFit.cover,
-              ),
-            ),
-            Padding(padding: const EdgeInsets.all(8)),
-          ],
+        child: Expanded(
+          child: Image.network(
+            image.imageUrl,
+            width: double.infinity,
+            fit: BoxFit.cover,
+          ),
         ),
       ),
     );

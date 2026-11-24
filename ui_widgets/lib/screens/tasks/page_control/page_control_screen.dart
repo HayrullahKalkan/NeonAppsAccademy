@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ui_widgets/widgets/custom_app_bar.dart';
 
 import '../../../data/page_data.dart';
 
@@ -23,7 +24,10 @@ class _PageControlScreenState extends State<PageControlScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: pages[currentPage].backgroundColor,
-      appBar: AppBar(title: const Text('Prince Page Control')),
+      appBar: CustomAppBar(
+        title: 'Page Control',
+        subtitle: 'FLUTTER CHALLENGE',
+      ),
       body: Column(
         children: [
           Expanded(

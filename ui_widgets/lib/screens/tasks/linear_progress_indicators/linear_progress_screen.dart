@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ui_widgets/widgets/custom_app_bar.dart';
 
 class LinearProgressScreen extends StatefulWidget {
   const LinearProgressScreen({super.key});
@@ -23,7 +24,10 @@ class _LinearProgressScreenState extends State<LinearProgressScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Linear Progress Indicator')),
+      appBar: CustomAppBar(
+        title: 'Linear Progress Indicator',
+        subtitle: 'FLUTTER CHALLENGE',
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

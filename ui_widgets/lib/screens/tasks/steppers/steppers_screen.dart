@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ui_widgets/widgets/custom_app_bar.dart';
 
 class SteppersScreen extends StatefulWidget {
   const SteppersScreen({super.key});
@@ -29,7 +30,7 @@ class _SteppersScreenState extends State<SteppersScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Steppers')),
+      appBar: CustomAppBar(title: 'Steppers', subtitle: 'FLUTTER CHALLENGE'),
       body: Container(
         padding: const EdgeInsets.all(16.0),
         child: Column(

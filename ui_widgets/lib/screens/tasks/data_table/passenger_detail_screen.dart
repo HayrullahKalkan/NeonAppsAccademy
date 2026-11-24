@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ui_widgets/widgets/custom_app_bar.dart';
 
 import '../../../models/passenger_model.dart';
 
@@ -10,7 +11,7 @@ class PassengerDetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Passenger Details')),
+      appBar: CustomAppBar(title: 'Passenger Details'),
       body: ListView(
         padding: const EdgeInsets.all(20),
         children: [

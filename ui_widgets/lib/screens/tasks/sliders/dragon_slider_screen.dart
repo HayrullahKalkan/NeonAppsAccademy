@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ui_widgets/widgets/custom_app_bar.dart';
 
 class DragonSliderScreen extends StatefulWidget {
   const DragonSliderScreen({super.key});
@@ -13,7 +14,10 @@ class _DragonSliderScreenState extends State<DragonSliderScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Dragon Slayer'), centerTitle: true),
+      appBar: CustomAppBar(
+        title: 'Dragon Slayer',
+        subtitle: 'FLUTTER CHALLENGE',
+      ),
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(20),
