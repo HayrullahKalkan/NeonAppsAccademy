@@ -3,7 +3,6 @@ class SmartDevice {
   final String name;
   final String room;
   final String imagePath;
-
   final bool isOn;
 
   const SmartDevice({
